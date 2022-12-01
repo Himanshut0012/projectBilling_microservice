@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+	<changeSet id="insert-billing" author="himanshu">
+		<insert tableName="project_billing">
+			<column name="billing_type" value="Quarterly" />
+			<column name="created_by" value="1" />
+			<column name="created_date" value="2022-08-26" />
+			<column name="last_updated_by" value="1" />
+			<column name="last_updated_date" value="2022-08-26" />
+			<column name="record_status" value="W" />
+		</insert>
+		<insert tableName="project_billing">
+			<column name="billing_type" value="Monthly" />
+			<column name="created_by" value="1" />
+			<column name="created_date" value="2022-08-26" />
+			<column name="last_updated_by" value="1" />
+			<column name="last_updated_date" value="2022-08-26" />
+			<column name="record_status" value="W" />
+		</insert>
+		<insert tableName="project_billing">
+			<column name="billing_type" value="Yearly" />
+			<column name="created_by" value="1" />
+			<column name="created_date" value="2022-08-26" />
+			<column name="last_updated_by" value="1" />
+			<column name="last_updated_date" value="2022-08-26" />
+			<column name="record_status" value="W" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
+
+	<changeSet id="1" author="himanshu">
+		<createTable tableName="project_billing">
+			<column name="billing_id" type="integer" />
+			<column name="billing_type" type="varchar(20)" />
+			<column name="created_by" type="varchar(20)" />
+			<column name="created_date" type="timestamp" />
+			<column name="last_updated_by" type="varchar(20)" />
+			<column name="last_updated_date" type="timestamp" />
+			<column name="record_status" type="varchar(1)" />
+		</createTable>
+
+		<addNotNullConstraint tableName="project_billing"
+			columnName="billing_id" />
+		<addNotNullConstraint tableName="project_billing"
+			columnName="billing_type" />
+		<addNotNullConstraint tableName="project_billing"
+			columnName="record_status" />
+		<addPrimaryKey tableName="project_billing"
+			columnNames="billing_id" />
+		<addUniqueConstraint columnNames="billing_id"
+			tableName="project_billing" />
+		<addAutoIncrement tableName="project_billing"
+			columnName="billing_id" />
+	</changeSet>
+</databaseChangeLog>
